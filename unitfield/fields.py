@@ -1,60 +1,60 @@
 # -*- coding: utf-8 -*-
-from unit_field.utils import sanitize_separators
+from unitfield.utils import sanitize_separators
 from django.db.models import FloatField, CharField as ModelCharField
 from django.forms import CharField
-from unit_field.units import (Unit, UnitValueCreator,
-    UNITS_PERCENTAGE,
-    UNITS_LENGTH,
-    UNITS_SQUARE_MEASURE,
-    UNITS_SOLID_MEASURE,
-    UNITS_MASS,
-    UNITS_TIME,
-    UNITS_TIME2,
-    UNITS_ELECTRIC_CURRENT,
-    UNITS_TEMPERATURE,
-    UNITS_AMOUNT_OF_SUBSTANCE,
-    UNITS_LUMINOUS_INTENSITY,
+from unitfield.units import (Unit, UnitValueCreator,
+                             UNITS_PERCENTAGE,
+                             UNITS_LENGTH,
+                             UNITS_SQUARE_MEASURE,
+                             UNITS_SOLID_MEASURE,
+                             UNITS_MASS,
+                             UNITS_TIME,
+                             UNITS_TIME2,
+                             UNITS_ELECTRIC_CURRENT,
+                             UNITS_TEMPERATURE,
+                             UNITS_AMOUNT_OF_SUBSTANCE,
+                             UNITS_LUMINOUS_INTENSITY,
 
-    UNITS_ACCELERATION,
-    UNITS_ANGLE,
-    UNITS_CRACKLE,
-    UNITS_CURRENT,
-    UNITS_DENSITY,
-    UNITS_FORCE,
-    UNITS_INERTIA_TORQUE,
-    UNITS_JERK,
-    UNITS_POTENTIAL,
-    UNITS_SNAP,
-    UNITS_SPEED,
-    UNITS_TORSION,
-    UNITS_TORQUE,
-    UNITS_VELOCITY,
+                             UNITS_ACCELERATION,
+                             UNITS_ANGLE,
+                             UNITS_CRACKLE,
+                             UNITS_CURRENT,
+                             UNITS_DENSITY,
+                             UNITS_FORCE,
+                             UNITS_INERTIA_TORQUE,
+                             UNITS_JERK,
+                             UNITS_POTENTIAL,
+                             UNITS_SNAP,
+                             UNITS_SPEED,
+                             UNITS_TORSION,
+                             UNITS_TORQUE,
+                             UNITS_VELOCITY,
 
-    UNITS_POWER,
-    UNITS_THERMAL_RESISTANCE,
-    UNITS_HEAT_TRANSFER_RESISTANCE,
-    UNITS_HEAT_CONDUCTANCE,
-    UNITS_HEAT_CAPACITY,
-    UNITS_SPECIFIC_HEAT_CAPACITY,
-    UNITS_MOTOR_CONSTANT,
-    UNITS_FORCE_CONSTANT,
-    UNITS_ELECTRICAL_TIME_CONSTANT,
-    UNITS_POTENTIAL_CONSTANT,
-    UNITS_ELECTRICAL_RESISTANCE,
-    UNITS_INDUCTANCE,
+                             UNITS_POWER,
+                             UNITS_THERMAL_RESISTANCE,
+                             UNITS_HEAT_TRANSFER_RESISTANCE,
+                             UNITS_HEAT_CONDUCTANCE,
+                             UNITS_HEAT_CAPACITY,
+                             UNITS_SPECIFIC_HEAT_CAPACITY,
+                             UNITS_MOTOR_CONSTANT,
+                             UNITS_FORCE_CONSTANT,
+                             UNITS_ELECTRICAL_TIME_CONSTANT,
+                             UNITS_POTENTIAL_CONSTANT,
+                             UNITS_ELECTRICAL_RESISTANCE,
+                             UNITS_INDUCTANCE,
 
-    UNITS_ANGLE_VELOCITY,
-    UNITS_ANGLE_ACCELERATION,
-    UNITS_ANGLE_JERK,
-    UNITS_ANGLE_SNAP,
-    UNITS_ANGLE_CRACKLE,
+                             UNITS_ANGLE_VELOCITY,
+                             UNITS_ANGLE_ACCELERATION,
+                             UNITS_ANGLE_JERK,
+                             UNITS_ANGLE_SNAP,
+                             UNITS_ANGLE_CRACKLE,
 
-    UNITS_VISCOSITY,
-    UNITS_FLOW_RATE,
-)
+                             UNITS_VISCOSITY,
+                             UNITS_FLOW_RATE,
+                             )
 
 
-from unit_field import forms
+from unitfield import forms
 
 try:
     from hashlib import md5
@@ -248,7 +248,7 @@ class UnitField(FloatField):
             verbose_name=self.verbose_name)
         cls.add_to_class("%s_input" % (self.name,), self.input_field)
 
-        # self.unit_field = CharField(default=self.default_unit, choices=self.choices)
+        # self.unitfield = CharField(default=self.default_unit, choices=self.choices)
         self.unit_field = ModelCharField(max_length=10,
             default=self.default_unit,
             choices=self.choices)
@@ -416,6 +416,6 @@ try:
     from south.modelsinspector import add_introspection_rules
     rules = [((CalculatedFloatField, ), [], {}),]
     add_introspection_rules(rules, [
-        "^unit_field\.fields"])
+        "^unitfield\.fields"])
 except ImportError:
     pass

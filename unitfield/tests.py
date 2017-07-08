@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 from django.test import TestCase
-from unit_field.units import Unit, UnitValue, get_choices
+from unitfield.units import Unit, UnitValue, get_choices
 
 class UnitTest(TestCase):
     def test_attribute_factor(self):

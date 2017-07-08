@@ -55,7 +55,7 @@ Enable client-side unit conversion
 If you want to use client-side unit conversion, you have to include the static javascript file located in the ``static`` directory of the app::
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/{{jquery-version}}/jquery.min.js"></script>
-    <script src="{{ STATIC_URL }}js/jquery.unit-field.js"></script>
+    <script src="{{ STATIC_URL }}js/jquery.unitfield.js"></script>
 
 If you want to exclude some fields from automatic conversion, you can use the additional parameter ``auto_convert``::
 

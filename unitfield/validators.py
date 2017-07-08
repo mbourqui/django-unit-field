@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from unit_field.fields import get_factor
+from unitfield.fields import get_factor
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 
