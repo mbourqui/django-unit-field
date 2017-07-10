@@ -1,3 +1,11 @@
+[![Python](https://img.shields.io/badge/Python-3.4,3.5,3.6-blue.svg?style=flat-square)](/)
+[![Django](https://img.shields.io/badge/Django-1.8,1.9,1.10,1.11-blue.svg?style=flat-square)](/)
+[![License](https://img.shields.io/badge/License-UNLICENSE-blue.svg?style=flat-square)](/UNLICENSE)
+[![PyPI](https://img.shields.io/pypi/v/django_unitfield.svg?style=flat-square)](https://pypi.python.org/pypi/django-unitfield)
+[![Build Status](https://travis-ci.org/mbourqui/django-unitfield.svg?branch=master)](https://travis-ci.org/mbourqui/django-unitfield)
+[![Coverage Status](https://coveralls.io/repos/github/mbourqui/django-unitfield/badge.svg?branch=master)](https://coveralls.io/github/mbourqui/django-unitfield?branch=master)
+
+
 django-unit-field
 =================
 
