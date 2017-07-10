@@ -2,6 +2,7 @@
 from django.test import TestCase
 from unitfield.units import Unit, UnitValue, get_choices
 
+
 class UnitTest(TestCase):
     def test_attribute_factor(self):
         """
@@ -30,6 +31,7 @@ class UnitTest(TestCase):
         e.label = u'metre'
         self.assertEqual(e.label, u'metre')
 
+
 class UnitValueTest(TestCase):
     def test_attribute_input(self):
         """
@@ -55,10 +57,10 @@ class UnitValueTest(TestCase):
         multiplied by the unit factor (unit)
         """
         testCases = [
-            { 'params': [7.1, 0.1],  'result': 0.71 },
-            { 'params': [0.1, 0.1],  'result': 0.01 },
-            { 'params': [5, 0.01],   'result': 0.05 },
-            { 'params': [2.4, 1000], 'result': 2400 },
+            {'params': [7.1, 0.1], 'result': 0.71},
+            {'params': [0.1, 0.1], 'result': 0.01},
+            {'params': [5, 0.01], 'result': 0.05},
+            {'params': [2.4, 1000], 'result': 2400},
         ]
         for testCase in testCases:
             uv = UnitValue(
@@ -72,9 +74,9 @@ class UnitValueTest(TestCase):
         in the correct way
         """
         a = [
-            Unit(0.001, 'mm', 'milimetre' ),
-            Unit(0.01,  'cm', 'centimetre'),
-            Unit(0.1,   'dm', 'decimetre' ),
+            Unit(0.001, 'mm', 'milimetre'),
+            Unit(0.01, 'cm', 'centimetre'),
+            Unit(0.1, 'dm', 'decimetre'),
         ]
 
         b = [(0.001, 'mm'), (0.01, 'cm'), (0.1, 'dm')]
