@@ -1,2 +1,5 @@
-include CONTRIBUTORS README.rst UNLICENSE
+include UNLICENSE
+include CONTRIBUTORS
+inlcude README.rst
+inlcude README.md
 recursive-include unitfield *.py *.html *.js
